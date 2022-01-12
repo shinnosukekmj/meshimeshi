@@ -1,0 +1,8 @@
+<h1>プロフ編集</h1>
+<%=form_with model:@user,local:true do|f|%>
+<label for="inputName">名前</label>
+<%=f.text_field:name,id: "inputName",placeholder: "名前"%>
+<label for="inputImage">プロフ画像</label>
+<%=f.file_field:profile_image,placeholder: "写真",accept: "image/*"%>
+<%=f.submit'編集'%>
+<%end%>
